@@ -9,7 +9,7 @@ class MhsController extends Controller
 {
     public function index()
     {
-        $mahasiswas = Mahasiswa::latest()->paginate(5);
+        $mahasiswas = Mahasiswa::latest()->paginate(4);
  
         return view('mahasiswas.index',compact('mahasiswas'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
