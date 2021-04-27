@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
-use App\Models\Mahasiswa;
+use App\Models\mahasiswa;
  
 class MhsController extends Controller
 {

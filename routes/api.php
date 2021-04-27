@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\MhsController;
+use App\Http\Controllers\MtkController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+//mahasiswa
+//  Route::get('mahasiswas', 'MhsController@index');
+Route::get('/mahasiswas', [MhsController::class, 'index']);
+Route::post('/mahasiswas/create', [MhsController::class, 'store']);
+
+
+//matakuliah
+Route::get('/matakuliahs', [MtkController::class, 'index']);
+Route::post('/matakuliahs/create', [MtkController::class, 'store']);
+
+
+
